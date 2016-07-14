@@ -1,4 +1,4 @@
-package task_manager;
+package projectPack;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,23 +8,19 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Tasks
+ * Servlet implementation class CreateProject
  */
-public class Tasks extends HttpServlet {
+public class CreateProject extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-   
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	
-		
-		HttpSession session = req.getSession(false);
+			HttpSession session = req.getSession(false);
 		
 		if(session.getAttribute("firstname")!=null)
 			
 				{	req.setAttribute("firstname", req.getParameter("firstname"));
-					req.getRequestDispatcher("/jsp/task/Tasks.jsp").forward(req, resp);	
+					req.getRequestDispatcher("/jsp/project/CreateProject.jsp").forward(req, resp);	
 					}
 			
 			else
@@ -32,11 +28,9 @@ public class Tasks extends HttpServlet {
 	}
 
 	
-	
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-	
-		doGet(req, resp);
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		doGet(request, response);
 	}
 
 }

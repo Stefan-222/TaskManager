@@ -17,11 +17,11 @@ public class Create extends HttpServlet {
 		if(session.getAttribute("firstname")!=null)
 			
 				{	req.setAttribute("firstname", req.getParameter("firstname"));
-					req.getRequestDispatcher("/jsp/CreateTask.jsp").forward(req, resp);	
+					req.getRequestDispatcher("/jsp/task/CreateTask.jsp").forward(req, resp);	
 					}
 			
 			else
-				{	req.getRequestDispatcher("/jsp/login.jsp").forward(req, resp);	}
+				{	req.getRequestDispatcher("/jsp/task/login.jsp").forward(req, resp);	}
 	}
 
 	

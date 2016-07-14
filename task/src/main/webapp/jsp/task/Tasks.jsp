@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Tasks</title>
-	<style> <jsp:directive.include file="css/style.jsp"/> </style>
+	<style> <jsp:directive.include file="../css/style.jsp"/> </style>
 </head>
 
 <body>
@@ -12,12 +12,12 @@
 	</div>
 	
 	<div id="meniu">
-   			 <jsp:directive.include file="menus/Meniu.jsp" />
+   			 <jsp:directive.include file="../menus/Meniu.jsp" />
 	</div> 
 	
 	<div id="sec">
 		<div id="secundar">
-				 <jsp:directive.include file="menus/MeniuTask.jsp" />	
+				 <jsp:directive.include file="../menus/MeniuTask.jsp" />	
 		</div>
 	
 	

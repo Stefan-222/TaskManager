@@ -1,4 +1,4 @@
-package task_manager;
+package projectPack;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -17,7 +17,7 @@ public class SeeProject extends HttpServlet {
 		if(session.getAttribute("firstname")!=null)
 			
 				{	req.setAttribute("firstname", req.getParameter("firstname"));
-					req.getRequestDispatcher("/jsp/SeeProject.jsp").forward(req, resp);	
+					req.getRequestDispatcher("/jsp/project/SeeProject.jsp").forward(req, resp);	
 					}
 			
 			else
@@ -25,9 +25,10 @@ public class SeeProject extends HttpServlet {
 	}
 
 	
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		doGet(request, response);
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		doGet(req, resp);
+	
 	}
 
 }

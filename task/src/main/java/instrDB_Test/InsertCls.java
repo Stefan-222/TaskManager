@@ -1,11 +1,5 @@
-package instrDB;
+package instrDB_Test;
 
-import java.util.Iterator;
-import java.util.List;
-
-import javax.management.Query;
-
-import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -13,6 +7,8 @@ import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import DAO.User;
+
+
 
 public class InsertCls {
 
@@ -32,8 +28,8 @@ public class InsertCls {
 		//Inserting Student Records
 		Transaction tx = session.beginTransaction();
 		User user = new User();
-		user.setUser("tyuu");
-		user.setPassword("09876");
+		user.setUser("admin");
+		user.setPassword("parola");
 		session.save(user);
 		tx.commit();
 

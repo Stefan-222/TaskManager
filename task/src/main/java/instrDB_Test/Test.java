@@ -1,4 +1,4 @@
-package instrDB;
+package instrDB_Test;
 
 
 import org.hibernate.Session;

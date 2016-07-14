@@ -2,14 +2,18 @@ body{
 background-color:LightGrey;
 }
 
-#header{
-background: teal;	
-width: 900px;
+#page{
+width: 1000px;
+margin:5px auto;
 }
 
+#header{
+background: teal;	
+width: 1000px;
+}
 
 #meniu{
-	width: 900px;
+	width: 1000px;
 	background: white;	
 }
 

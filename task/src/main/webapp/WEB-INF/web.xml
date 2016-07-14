@@ -792,7 +792,7 @@ standard deployment descriptor.
   </servlet-mapping>
   <servlet>
     <servlet-name>Tasks</servlet-name>
-    <servlet-class>task_manager.Tasks</servlet-class>
+    <servlet-class>taskPack.Tasks</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Tasks</servlet-name>
@@ -808,7 +808,7 @@ standard deployment descriptor.
   </servlet-mapping>
   <servlet>
     <servlet-name>Create</servlet-name>
-    <servlet-class>task_manager.Create</servlet-class>
+    <servlet-class>taskPack.Create</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Create</servlet-name>
@@ -816,7 +816,7 @@ standard deployment descriptor.
   </servlet-mapping>
   <servlet>
     <servlet-name>Projects</servlet-name>
-    <servlet-class>task_manager.Projects</servlet-class>
+    <servlet-class>projectPack.Projects</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Projects</servlet-name>
@@ -826,7 +826,7 @@ standard deployment descriptor.
     <description></description>
     <display-name>CreateProject</display-name>
     <servlet-name>CreateProject</servlet-name>
-    <servlet-class>task_manager.CreateProject</servlet-class>
+    <servlet-class>projectPack.CreateProject</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CreateProject</servlet-name>
@@ -836,10 +836,30 @@ standard deployment descriptor.
     <description></description>
     <display-name>SeeProject</display-name>
     <servlet-name>SeeProject</servlet-name>
-    <servlet-class>task_manager.SeeProject</servlet-class>
+    <servlet-class>projectPack.SeeProject</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>SeeProject</servlet-name>
     <url-pattern>/SeeProject</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SeeProjectTrue</display-name>
+    <servlet-name>SeeProjectTrue</servlet-name>
+    <servlet-class>projectPack.SeeProjectTrue</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SeeProjectTrue</servlet-name>
+    <url-pattern>/SeeProjectTrue</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CreateProjectDo</display-name>
+    <servlet-name>CreateProjectDo</servlet-name>
+    <servlet-class>projectPack.CreateProjectDo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CreateProjectDo</servlet-name>
+    <url-pattern>/CreateProjectDo</url-pattern>
   </servlet-mapping>
 </web-app>

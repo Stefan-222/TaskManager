@@ -30,7 +30,7 @@ public class Login extends HttpServlet {
 		 HttpSession session = req.getSession(false);
 		 session.setAttribute("firstname", firstName);
 		//  if(session!=null)
-		 
+		
 		if (!Check.validate(firstName, password)){
 				// not correct go back to login
 					doGet(req, resp);	} 
