@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="taskmanager" match-name="comments"/>
+  <table-filter match-catalog="taskmanager" match-name="detali_project"/>
+  <table-filter match-catalog="taskmanager" match-name="prioritities"/>
+  <table-filter match-catalog="taskmanager" match-name="project"/>
+  <table-filter match-catalog="taskmanager" match-name="release"/>
+  <table-filter match-catalog="taskmanager" match-name="role"/>
+  <table-filter match-catalog="taskmanager" match-name="status"/>
+  <table-filter match-catalog="taskmanager" match-name="task"/>
+  <table-filter match-catalog="taskmanager" match-name="user"/>
+</hibernate-reverse-engineering>
