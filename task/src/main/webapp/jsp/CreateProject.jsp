@@ -7,7 +7,7 @@
 <body>
 <div id="page">
 	<div id="header">
-			 <h2>Hello <%= (String)session.getAttribute("firstname") %></h2>
+			 <h2>Hello <%= (String)session.getAttribute("firstname") %>!</h2>
    			  <h5>id sesion: <% out.print( session.getId()); %></h5>
 	</div>
 	
