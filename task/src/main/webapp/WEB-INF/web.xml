@@ -832,4 +832,14 @@ standard deployment descriptor.
     <servlet-name>CreateProject</servlet-name>
     <url-pattern>/CreateProject</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SeeProject</display-name>
+    <servlet-name>SeeProject</servlet-name>
+    <servlet-class>task_manager.SeeProject</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SeeProject</servlet-name>
+    <url-pattern>/SeeProject</url-pattern>
+  </servlet-mapping>
 </web-app>
