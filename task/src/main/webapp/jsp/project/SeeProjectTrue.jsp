@@ -14,8 +14,8 @@
 <body>
 <div id="page">
 	<div id="header">
-			 <h2>Hello <%= (String)session.getAttribute("firstname") %></h2>
-   			  <h5>id sesion: <% out.print( session.getId()); %></h5>
+  		      <h3>Today's date: <%= (new java.util.Date()).toLocaleString()%></h3>
+     		  <h2>Hello <%= (String)session.getAttribute("firstname") %></h2>
 	</div>
 	
 	<div id="meniu">

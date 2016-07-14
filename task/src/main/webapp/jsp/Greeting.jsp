@@ -6,16 +6,16 @@
 </head>
 <body>
 <div>
+<div id"page">
 	<div id="header">
-	
+       <h3>Today's date: <%= (new java.util.Date()).toLocaleString()%></h3>
        <h2>Hello <%= (String)session.getAttribute("firstname") %></h2>
-       <h5>id sesion: <% out.print( session.getId()); %></h5>
 	</div>
 	
 	<div id="meniu">
     <jsp:directive.include file="menus/Meniu.jsp" />
 	</div> 
-	<div id="sec">
+	<div id="sec" style="background-image:url(css/fundal.jpg);";>
 		
 	</div>
 </div>

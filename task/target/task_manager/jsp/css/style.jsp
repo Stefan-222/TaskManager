@@ -1,10 +1,11 @@
 body{
-background-color:LightGrey;
+	background-color:LightGrey;
 }
 
 #page{
-width: 1000px;
-margin:5px auto;
+	width:1000px; 
+	margin:25px  auto;
+	
 }
 
 #header{
@@ -18,15 +19,15 @@ width: 1000px;
 }
 
 #sec{
-
-margin-top:5px;
-
+margin-top:10px;
+height:250px;
+width: 1000px;
 }
 
 #Secundar{
+	float:left;
 	width:150px;
 	height:250px;
-	
 	background: white;
 }	
 
@@ -35,8 +36,8 @@ margin-top:5px;
 #create{
 	float:left;
 	height:250px;
-	margin-left:50px;
-	width:500px;
+	margin-left:10px;
+	width:815px;
 	background:Lavender;
 }
 
