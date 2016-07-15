@@ -19,7 +19,7 @@ public class CreateProject extends HttpServlet {
 		
 		if(session.getAttribute("firstname")!=null)
 			
-				{	req.setAttribute("firstname", req.getParameter("firstname"));
+				{   req.setAttribute("firstname", req.getParameter("firstname"));
 					req.getRequestDispatcher("/jsp/project/CreateProject.jsp").forward(req, resp);	
 					}
 			

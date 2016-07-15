@@ -862,4 +862,24 @@ standard deployment descriptor.
     <servlet-name>CreateProjectDo</servlet-name>
     <url-pattern>/CreateProjectDo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteProject</display-name>
+    <servlet-name>DeleteProject</servlet-name>
+    <servlet-class>projectPack.DeleteProject</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteProject</servlet-name>
+    <url-pattern>/DeleteProject</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteProjectDo</display-name>
+    <servlet-name>DeleteProjectDo</servlet-name>
+    <servlet-class>projectPack.DeleteProjectDo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteProjectDo</servlet-name>
+    <url-pattern>/DeleteProjectDo</url-pattern>
+  </servlet-mapping>
 </web-app>

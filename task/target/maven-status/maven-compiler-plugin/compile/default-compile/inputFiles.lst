@@ -1,4 +1,5 @@
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Prioritities.java
+C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\DeleteProjectFct.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Project.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\task_manager\Logout.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\CreateProjectDo.java
@@ -10,12 +11,15 @@ C:\Users\Stefan\git\TaskManager\task\src\main\java\task_manager\Login.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Role.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\task_manager\Create.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\CreateProject.java
+C:\Users\Stefan\git\TaskManager\task\src\main\java\instrDB_Test\DeleteProjectFct.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\instrDB_Test\SelectCls.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Greeting.java
+C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\DeleteProjectDo.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\taskPack\Create.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Status.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\SeeProject.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\User.java
+C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\DeleteProject.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Task.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\DAO\Login.java
 C:\Users\Stefan\git\TaskManager\task\src\main\java\projectPack\InsertProject.java

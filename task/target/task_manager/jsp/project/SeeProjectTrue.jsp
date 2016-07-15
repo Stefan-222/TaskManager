@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Projects</title>
+	<title>Project</title>
 	<style> <jsp:directive.include file="../css/style.jsp"/> </style>
 	<%@ page import="java.util.List" %>
 	<%@ page import="projectPack.SelectProject" %>

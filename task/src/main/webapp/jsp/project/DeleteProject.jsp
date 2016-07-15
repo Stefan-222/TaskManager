@@ -21,16 +21,11 @@
 				</div>
 	
 			<div id="create">
-				<form action="http://localhost:8080/task/CreateProjectDo" method=POST>
+				<form action="http://localhost:8080/task/DeleteProjectDo" method=POST>
 					<br> <br> 
-                    <label>Name</label>         
-					<input type="text" name="denumire" required="true">
-					<br>
-					<label>Description</label>         
-					<input type="text" name="descriere" required="true">
-					<br>
-					<input type="submit" name="submit" value="Create">
-					<input type="reset" name="reset" value="Reset">
+                    <label>Project id</label>         
+					<input type="text" name="id" required="true">
+					<input type="submit" name="submit" value="Delete">		
 				</form>
 			</div>
 		</div>

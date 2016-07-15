@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Tasks</title>
+	<title>Project</title>
 	<style> <jsp:directive.include file="../css/style.jsp"/> </style>
 </head>
 
