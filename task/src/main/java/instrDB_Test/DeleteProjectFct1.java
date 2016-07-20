@@ -9,7 +9,7 @@ import org.hibernate.cfg.Configuration;
 import DAO.Project;
 
 
-public class DeleteProjectFct {
+public class DeleteProjectFct1 {
    private static SessionFactory factory; 
    public static void main(String[] args) {
       try{
@@ -19,8 +19,8 @@ public class DeleteProjectFct {
          throw new ExceptionInInitializerError(ex); 
       }
 
-    /*  DeleteProject ME = new DeleteProject();
-      ME.deleteProj(5);*/
+    //  DeleteProject1 ME = new DeleteProject1();
+    //  ME.deleteProj(5);
 
    }
   

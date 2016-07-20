@@ -3,11 +3,12 @@ package projectPack;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-public class SeeProjectTrue {
+public class SeeProjectTrue extends HttpServlet {
  static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -17,7 +18,8 @@ public class SeeProjectTrue {
 		if(session.getAttribute("firstname")!=null)
 			
 				{	req.setAttribute("firstname", req.getParameter("firstname"));
-					req.getRequestDispatcher("/jsp/project/SeeProjectTrue.jsp").forward(req, resp);	
+				req.getRequestDispatcher("jsp/project/SeeProjectTrue.jsp").forward(req, resp);		
+	
 					}
 			
 			else
@@ -27,17 +29,12 @@ public class SeeProjectTrue {
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String name = req.getParameter("project").toString();
-		/*
-		List<Project> projectss=new SelectProject().listEmployees(name);
+		HttpSession session = req.getSession(false);	
+		session.setAttribute("title", name);
 		
-		HttpSession session = req.getSession(false);
+		req.getRequestDispatcher("jsp/project/SeeProjectTrue.jsp").forward(req, resp);		
 		
-		//req.setAttribute("projectss", projectss);
-		session.setAttribute("projectss", projectss);
-		req.getRequestDispatcher("jsp/SeeProjectTrue.jsp").forward(req, resp);
-		
-		//doGet(req, resp);
-	*/
+	
 	}
 }
 

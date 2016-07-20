@@ -22,21 +22,22 @@
    			 <jsp:directive.include file="../menus/Meniu.jsp" />
 	</div> 
 
-	<div id="sec">
-		<div id="secundar">
-				 <jsp:directive.include file="../menus/MeniuProject.jsp" />	
-		</div>
+		<div id="sec">
+				<div id="secundar">
+					 <jsp:directive.include file="../menus/MeniuProject.jsp" />	
+				</div>
 	
 			
-		<div id="create">
+				<div id="create">
 			
-			<%	SelectProject ME = new SelectProject();
-	      		System.out.println(ME.listEmployees());
-	      		%>
+					<%
+			 		     String nume = (String)session.getAttribute("title") ;
+		 		   		 out.print(SelectProject.select().get(SelectProject.select1Proj(nume)).getTitle());
+	     	 		%>
 
 		
+				</div>
 		</div>
-	</div>
 </div>
 </body>
 </html>

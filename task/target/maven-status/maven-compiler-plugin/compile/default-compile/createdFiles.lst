@@ -12,16 +12,14 @@ projectPack\Projects.class
 DAO\Comments.class
 DAO\DetaliProject.class
 DAO\Role.class
-instrDB_Test\DeleteProjectFct.class
 projectPack\SeeProjectTrue.class
+instrDB_Test\DeleteProjectFct1.class
 instrDB_Test\SelectCls.class
 DAO\Release.class
 taskPack\Create.class
 DAO\Project.class
 DAO\Task.class
 projectPack\DeleteProjectFct.class
-task_manager\Create.class
-task_manager\Tasks.class
 projectPack\SelectProject.class
 projectPack\InsertProject.class
 instrDB_Test\InsertCls.class
@@ -29,5 +27,6 @@ projectPack\CreateProjectDo.class
 projectPack\DeleteProjectDo.class
 task_manager\Logout.class
 instrDB_Test\Test.class
+projectPack\UpdateProject.class
 task_manager\Login.class
 DAO\Login.class

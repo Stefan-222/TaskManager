@@ -2,6 +2,13 @@
 <head>
 	<title>Project</title>
 	<style> <jsp:directive.include file="../css/style.jsp"/> </style>
+	<%@ page import="java.util.List" %>
+	<%@ page import="projectPack.SelectProject" %>
+	<%@ page import="DAO.Project" %>
+	<%@ page import="javax.servlet.ServletException" %>
+	<%@ page import="javax.servlet.http.HttpServletRequest" %>
+	<%@ page import="javax.servlet.http.HttpServletResponse" %>
+	<%@ page import="javax.servlet.http.HttpSession" %>
 </head>
 
 <body>
@@ -21,13 +28,23 @@
 		</div>
 	
 		<div id="create">
-			<form action="http://localhost:8080/task/SeeProjectsTrue" method=POST>
+			<form action="http://localhost:8080/task/SeeProjectTrue" method=POST>
 			Project Name:<br> 
 			<input type="text" name="project">
 			<br> 
 			<br> 
 			<input type="submit" value="Search"> 
 			</form>
+			
+			<%
+				Integer i=new Integer(null);
+			 	for( i=1;i<=10;i++){
+			 	
+					//if(SelectProject.selectIsID(i)!=0)
+	    	  		out.print(SelectProject.select().get(i).getTitle()+SelectProject.select().get(i).getDescription()+"\n"); } %><br>
+		
+		
+	      		
 		</div>
 	</div>
 </div>

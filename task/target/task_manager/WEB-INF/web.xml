@@ -882,4 +882,14 @@ standard deployment descriptor.
     <servlet-name>DeleteProjectDo</servlet-name>
     <url-pattern>/DeleteProjectDo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProject</display-name>
+    <servlet-name>UpdateProject</servlet-name>
+    <servlet-class>projectPack.UpdateProject</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProject</servlet-name>
+    <url-pattern>/UpdateProject</url-pattern>
+  </servlet-mapping>
 </web-app>

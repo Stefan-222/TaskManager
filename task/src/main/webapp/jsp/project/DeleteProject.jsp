@@ -24,7 +24,7 @@
 				<form action="http://localhost:8080/task/DeleteProjectDo" method=POST>
 					<br> <br> 
                     <label>Project id</label>         
-					<input type="text" name="id" required="true">
+					<input type="text" name="title" required="true">
 					<input type="submit" name="submit" value="Delete">		
 				</form>
 			</div>

@@ -17,7 +17,7 @@ public class DeleteProject extends HttpServlet {
 		if(session.getAttribute("firstname")!=null)
 			
 				{	req.setAttribute("firstname", req.getParameter("firstname"));
-					req.getRequestDispatcher("/jsp/proiect/DeleteProject.jsp").forward(req, resp);	
+					req.getRequestDispatcher("/jsp/project/DeleteProject.jsp").forward(req, resp);	
 					}
 			
 			else

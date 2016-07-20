@@ -24,7 +24,6 @@ public class SelectCls {
 
       SelectCls ME = new SelectCls();
 
-
       ME.listEmployees();
    }
 

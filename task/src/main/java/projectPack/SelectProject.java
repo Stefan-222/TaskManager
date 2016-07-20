@@ -15,43 +15,42 @@ import DAO.User;
 
 
 public class SelectProject{
-   private static SessionFactory factory; 
-   public static void main(String[] args) {
-      try{
-         factory = new Configuration().configure().buildSessionFactory();
-      }catch (Throwable ex) { 
-         System.err.println("Failed to create sessionFactory object." + ex);
-         throw new ExceptionInInitializerError(ex); 
-      }
-      SelectProject ME = new SelectProject();
-		System.out.println(ME.listEmployees()); 
-      	
-   }
 
-   /* Method to  READ all the employees */
-   public List<Project> listEmployees(){
-	   SessionFactory factory; 
-	   factory = new Configuration().configure().buildSessionFactory();
-      Session session = factory.openSession();
-      Transaction tx = null;
-      ArrayList project = new ArrayList<Project>();
-      try{
+	private static SessionFactory sessionFactory;
+	
+    public static List<Project> select() {
+    		try{
+    			sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
     	
-         tx = session.beginTransaction();
+    		}catch (Throwable ex) { 
+    			System.err.println("Failed to create sessionFactory object." + ex);
+    			throw new ExceptionInInitializerError(ex); 
+    		}
+
+    	Session session = sessionFactory.openSession();
+    	   
+    	Transaction tx = null;
+    	
+
+    	ArrayList project = new ArrayList<Project>();
+      	try{
+    	
+      			tx = session.beginTransaction();
      
-        List projects = session.createQuery("FROM Project").list(); 
+      			List projects = session.createQuery("FROM Project").list(); 
          
-         for (Iterator iterator = 
-               projects.iterator(); iterator.hasNext();){
-            Project proj = (Project) iterator.next(); 
-            int index = 0;
-			project.add(index, proj);
-   //         project.add(proj);  
-            System.out.println("Name: " + proj.getTitle()); 
-         } 
+      			for (Iterator iterator =  projects.iterator(); iterator.hasNext();){
+      			
+      				    Project proj = (Project) iterator.next(); 
+            
+      		
+      					project.add(proj);  
+            
+      					System.out.println("Name: " + proj.getTitle()); 
+      		} 
          
          tx.commit();
-         return project;
+   
       }catch (HibernateException e) {
          if (tx!=null) tx.rollback();
          e.printStackTrace(); 
@@ -61,9 +60,81 @@ public class SelectProject{
 	return project;
      
    }
+    
+    //******************************************************
+    public static int select1Proj(String title) {
+		try{
+			sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();	
+			}catch (Throwable ex) { 
+				System.err.println("Failed to create sessionFactory object." + ex);
+				throw new ExceptionInInitializerError(ex); 
+			}
+
+	Session session = sessionFactory.openSession();
+	Transaction tx = null;
+	
+
+	//ArrayList project = new ArrayList<Project>();
+	int project= 1;
+  	try{	
+  			tx = session.beginTransaction();
+  			List projects = session.createQuery("FROM Project").list();    
+  			for (Iterator iterator =  projects.iterator(); iterator.hasNext();){			
+  				    Project proj = (Project) iterator.next();    
+  				    if(title.equals(proj.getTitle())){
+  					project =    proj.getIdProject(); 
+  					System.out.println("Id proj este: " + proj.getTitle()); }
+  		} 
+     
+     tx.commit();
+
+  }catch (HibernateException e) {
+     if (tx!=null) tx.rollback();
+     e.printStackTrace(); 
+  }finally {
+     session.close(); 
+  }
+return project;
+ 
+}
+    
+    
+    
+    public static int selectIsID(int Id) {
+  		try{
+  			sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();	
+  			}catch (Throwable ex) { 
+  				System.err.println("Failed to create sessionFactory object." + ex);
+  				throw new ExceptionInInitializerError(ex); 
+  			}
+
+  	Session session = sessionFactory.openSession();
+  	Transaction tx = null;
+  	
+
+  	//ArrayList project = new ArrayList<Project>();
+  	int project= 0;
+    	try{	
+    			tx = session.beginTransaction();
+    			List projects = session.createQuery("FROM Project").list();    
+    			for (Iterator iterator =  projects.iterator(); iterator.hasNext();){			
+    				    Project proj = (Project) iterator.next();    
+    				    if(Id==proj.getIdProject()){
+    					project =    proj.getIdProject(); 
+    					System.out.println("Id proj este: " + proj.getIdProject()); }
+    		} 
+       
+       tx.commit();
+
+    }catch (HibernateException e) {
+       if (tx!=null) tx.rollback();
+       e.printStackTrace(); 
+    }finally {
+       session.close(); 
+    }
+  return project;
    
-   
-   
-   
-   
+  }
+    
+    
 }
