@@ -39,26 +39,38 @@
 			<input type="submit" value="Search"> 
 			</form>
 			
+
+			 <table border=3 cellpadding="3px">
+				 <% List <Project> myList = SelectProject.select(); 	 %>
+				 
+				 <thead>
+				 		<tr>
+				 			<td>Nr. crt. </td>
+				 			<td>Title</td>
+				 			<td>Description</td>
+				 			<td>Version</td>
+				 			<td>User responsible</td>
+				 		</tr>
+				 </thead>
+				 
+				 
+		<%		for(int i=0;i<myList.size();i++){
+					
+					Project proiect = (Project)SelectProject.select().get(i);  %>
+					 <tr>
+						
+						  <td><%= i+1 	 %> </td>
+					 	 <td><%= proiect.getTitle() 		 %> </td>
+					 	 <td><%= proiect.getDescription() 	 %> </td> 
+ 			 	 		 <td><%= proiect.getRelease(proiect.getIdProjectRelease()) %>	 </td> 
+ 			 	 		 <td><%= proiect.getUser(proiect.getIdProjectUser()) %>	 </td>
+ 					</tr>
+ 				 	<% }   %>
 			
-			
-			<c:forTokens items="${project}" delims="," var="Title">
-			   <c:out value="${project.getTitle}"/><p>
-			</c:forTokens>
-			
-			<c:forEach var="i" begin="1" end="5">
- 			  Item <c:out value="${i}"/><p>
-			</c:forEach>
-			
-	<%		/*	
-			 	for( i=1;i<=10;i++){
-			 	
-					//if(SelectProject.selectIsID(i)!=0)
-	    	  		out.print(SelectProject.select().get(i).getTitle()+SelectProject.select().get(i).getDescription()+"\n"); }
-			*/
-			%><br>
-		
-		
-	      		
+				
+			</table>
+<br>
+
 		</div>
 	</div>
 </div>

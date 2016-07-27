@@ -2,6 +2,13 @@
 <head>
 	<title>Project</title>
 	<style> <jsp:directive.include file="../css/style.jsp"/> </style>
+	<%@ page import="java.util.List" %>
+	<%@ page import="userPack.SelectUser" %>
+	<%@ page import="DAO.User" %>
+	<%@ page import="javax.servlet.ServletException" %>
+	<%@ page import="javax.servlet.http.HttpServletRequest" %>
+	<%@ page import="javax.servlet.http.HttpServletResponse" %>
+	<%@ page import="javax.servlet.http.HttpSession" %>
 </head>
 
 <body>
@@ -26,9 +33,23 @@
                     <label>Name</label>         
 					<input type="text" name="denumire" required="true">
 					<br>
-					<label>Description</label>         
-					<input type="text" name="descriere" required="true">
 					<br>
+					<label>Description</label>      
+					<br>   
+					<textarea cols="25" rows="5" wrap="hard" name="descriere"></textarea>
+					<br>
+					<br>
+					<label>User responsible</label> 
+					 <select name="responsible">
+					 <% List <User> mList = SelectUser.select();  %>
+					 <%		for(int i=0;i<mList.size();i++){	
+								 User user = (User)SelectUser.select().get(i); 
+					 %>
+				          <option value="<%= user.getUser() %> "><%= user.getUser() %></option>
+ 				      <% } %>    
+				          </select>
+				     <br>
+				     <br>
 					<input type="submit" name="submit" value="Create">
 					<input type="reset" name="reset" value="Reset">
 				</form>

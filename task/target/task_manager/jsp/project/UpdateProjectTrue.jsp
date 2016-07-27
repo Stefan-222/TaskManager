@@ -1,7 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-
 <html>
 <head>
 	<title>Project</title>
@@ -32,27 +31,28 @@
 		</div>
 	
 		<div id="create">
-			<form action="http://localhost:8080/task/UpdateProjectTrue" method=POST>
-			<br>
-			<br>
-					<label>Select project</label> 
-					 <select name="projectEdit">
-					 <% List <Project> mList = SelectProject.select();  %>
-					 <%		for(int i=0;i<mList.size();i++){	
-								 Project project = (Project)SelectProject.select().get(i); 
-					 %>
-				          <option value= <%= project.getIdProject() %> ><%= project.getTitle() %></option>
- 				      <% } %>    
-				          </select>
+			<form action="http://localhost:8080/task/UpdateProjectDo" method=POST>
+					
+					<br> <br> 
+                    <label><%= (String)session.getAttribute("idProj") %></label>    
+					<br> <br> 
+                    <label>Name</label>         
+                    <%     String idu = (String)session.getAttribute("idProj") ;	 
+            				int y = Integer.parseInt(idu);
+            				%>
+             
+					<input type="text" name="den" value=<%= SelectProject.selectTitle(y)	 %> >
+					<br>
+					<br>
+					<label>Description</label>      
+					<br>   
+					<textarea cols="25" rows="5" wrap="hard" name="descr"> <%= SelectProject.selectDescription(y) %> </textarea>
+
 				     <br>
 				     <br>
-				     <input type="submit" name="submit" value="Edit">
-			</form>
-			
-		
-		
-		
-	      		
+					<input type="submit" name="submit" value="Edit">
+					<input type="reset" name="reset" value="Reset">
+				</form>
 		</div>
 	</div>
 </div>

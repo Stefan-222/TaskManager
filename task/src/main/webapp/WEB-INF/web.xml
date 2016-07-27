@@ -892,4 +892,24 @@ standard deployment descriptor.
     <servlet-name>UpdateProject</servlet-name>
     <url-pattern>/UpdateProject</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProjectTrue</display-name>
+    <servlet-name>UpdateProjectTrue</servlet-name>
+    <servlet-class>projectPack.UpdateProjectTrue</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProjectTrue</servlet-name>
+    <url-pattern>/UpdateProjectTrue</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateProjectDo</display-name>
+    <servlet-name>UpdateProjectDo</servlet-name>
+    <servlet-class>projectPack.UpdateProjectDo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateProjectDo</servlet-name>
+    <url-pattern>/UpdateProjectDo</url-pattern>
+  </servlet-mapping>
 </web-app>
